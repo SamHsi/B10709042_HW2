@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">B10709042_HW2</string>
+    <string name="settings">settings</string>
+    <string name="color">Color</string>
+    <string name="add">add</string>
+    <string name="ok">OK</string>
+    <string name="cancel">cancel</string>
+    <string-array name="color">
+        <item name="red">red</item>
+        <item name="blue">blue</item>
+        <item name="green">green</item>
+    </string-array>
+    <string-array name="colorvalue">
+        <item>red</item>
+        <item>blue</item>
+        <item>green</item>
+    </string-array>
+
 </resources>
