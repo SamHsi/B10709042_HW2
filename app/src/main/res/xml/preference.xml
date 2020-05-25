@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <ListPreference
-        android:dialogTitle="@string/color"
-        android:title="@string/color"
-        android:entries="@array/color"
-        android:entryValues="@array/colorvalue"
-        android:key="display"
+        android:title="@string/colortitle"
+        android:entries="@array/colorlabelarr"
+        android:entryValues="@array/colorkeyarr"
+        android:key="@string/display"
+        android:defaultValue="@string/bluelabel"
     />
 
 </PreferenceScreen>

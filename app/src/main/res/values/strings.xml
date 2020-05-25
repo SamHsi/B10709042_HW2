@@ -1,19 +1,25 @@
 <resources>
     <string name="app_name">B10709042_HW2</string>
     <string name="settings">settings</string>
-    <string name="color">Color</string>
-    <string name="add">add</string>
+
+    <string name="add">Add</string>
     <string name="ok">OK</string>
     <string name="cancel">cancel</string>
-    <string-array name="color">
-        <item name="red">red</item>
-        <item name="blue">blue</item>
-        <item name="green">green</item>
-    </string-array>
-    <string-array name="colorvalue">
-        <item>red</item>
-        <item>blue</item>
-        <item>green</item>
-    </string-array>
+
+    <string name="colortitle">Color</string>
+    <string name="redlabel">Red</string>
+    <string name="bluelabel">Blue</string>
+    <string name="greenlabel">Green</string>
+
+    <string name="colorkey">color</string>
+    <string name="redkey">red</string>
+    <string name="bluekey">blue</string>
+    <string name="greenkey">green</string>
+
+    <string name="default_guest_name">[Guest name]</string>
+    <string name="default_party_size">\?</string>
+    <string name="warning">警告視窗</string>
+    <string name="warningcheck">是否確定要刪除？</string>
+    <string name="display">display</string>
 
 </resources>

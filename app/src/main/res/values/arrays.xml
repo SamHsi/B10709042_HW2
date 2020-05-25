@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="colorlabelarr">
+        <item>@string/redlabel</item>
+        <item>@string/bluelabel</item>
+        <item>@string/greenlabel</item>
+    </array>
+    <array name="colorkeyarr">
+        <item>@string/redkey</item>
+        <item>@string/bluekey</item>
+        <item>@string/greenkey</item>
+    </array>
+</resources>
