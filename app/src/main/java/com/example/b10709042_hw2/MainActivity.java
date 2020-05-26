@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
+import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -63,7 +64,8 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
                 }).setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        mAdapter.notifyItemChanged(viewHolder.getAdapterPosition());
+                        //mAdapter.notifyItemChanged(viewHolder.getAdapterPosition());
+                        mAdapter.swapCursor(getAllGuests());
                     }
                 }).create().show();
             }
@@ -72,8 +74,26 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
 
     @Override
     protected void onResume() {
+        Intent intent=getIntent();
+        String name=new String();
+        int partySize=0;
+        try{
+            name=intent.getStringExtra("guestName");
+            partySize=intent.getIntExtra("partySize",0);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        if(name!=null && partySize!=0){
+            addNewGuest(name,partySize);
+        }
         super.onResume();
+    }
 
+    private long addNewGuest(String name, int partySize) {
+        ContentValues cv = new ContentValues();
+        cv.put(WaitlistContract.WaitlistEntry.COLUMN_GUEST_NAME, name);
+        cv.put(WaitlistContract.WaitlistEntry.COLUMN_PARTY_SIZE, partySize);
+        return mDb.insert(WaitlistContract.WaitlistEntry.TABLE_NAME, null, cv);
     }
 
     @Override
